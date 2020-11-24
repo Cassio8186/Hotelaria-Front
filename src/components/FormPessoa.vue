@@ -2,7 +2,6 @@
 	<div>
 		<q-form class="q-gutter-md" @submit="onSubmit">
 			<q-input
-				filled
 				type="string"
 				label="Cpf"
 				hint="Digite CPF Sem pontos"
@@ -13,7 +12,6 @@
 			/>
 
 			<q-input
-				filled
 				label="Digite seu nome e sobrenome"
 				hint="Nome e Sobrenome"
 				type="string"
@@ -27,7 +25,6 @@
 			/>
 
 			<q-input
-				filled
 				type="string"
 				hint="Digite seu email"
 				label="email"
@@ -36,7 +33,6 @@
 				:rules="[val => isValidEmail(val) || 'Digite um email valido']"
 			/>
 			<q-input
-				filled
 				type="string"
 				hint="Digite seu Estado Civil"
 				label="Estado Civil"
@@ -47,7 +43,6 @@
 				]"
 			/>
 			<q-input
-				filled
 				type="string"
 				label="Genero"
 				hint="Digite seu Genero"
@@ -58,7 +53,6 @@
 				]"
 			/>
 			<q-input
-				filled
 				type="string"
 				label="Orgão emissor"
 				hint="Digite seu Orgão emissor"
@@ -70,7 +64,6 @@
 				]"
 			/>
 			<q-input
-				filled
 				type="string"
 				hint="Digite seu rg"
 				label="rg"
@@ -80,7 +73,6 @@
 			/>
 
 			<q-input
-				filled
 				v-model="form.dataNascimento"
 				label="Data de Nascimento"
 				hint="Insira data de nascimento. "
@@ -113,11 +105,10 @@
 			</q-input>
 
 			<q-input
-				filled
 				v-model="form.dataEmissaoRg"
 				:mask="dayMonthYearDateMask"
 				label="Data de Emissão do RG"
-				hint="Insira Data de Emissão do RG. [Formato: AAAA-MM-DD]"
+				hint="Insira Data de Emissão do RG."
 				:rules="[isValidDate]"
 			>
 				<template v-slot:append>

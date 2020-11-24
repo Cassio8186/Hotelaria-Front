@@ -15,7 +15,6 @@
 		/>
 		<q-form class="q-gutter-md" @submit="onSubmit">
 			<q-input
-				filled
 				v-model="form.checkin"
 				label="Data de Checkin"
 				hint="Insira Data de Checkin."
@@ -45,7 +44,6 @@
 			</q-input>
 
 			<q-input
-				filled
 				v-model="form.checkout"
 				:mask="dayMonthYearDateMask"
 				label="Data de Checkout"
@@ -115,9 +113,15 @@ export default {
 		isUpdating: false
 	}),
 	computed: {
+		/**
+		 * @returns {String}
+		 */
 		cpf() {
 			return this.$route.params.cpf;
 		},
+		/**
+		 * @returns {String}
+		 */
 		dataNascimentoConvertida() {
 			const { dataNascimento } = this.pessoa;
 			if (dataNascimento) {
@@ -129,6 +133,9 @@ export default {
 
 			return "";
 		},
+		/**
+		 * @returns {String}
+		 */
 		dayMonthYearDateMask() {
 			return "##/##/####";
 		}

@@ -6,11 +6,11 @@
 	"author": "Cassio Lopes <cassio8186@gmail.com>",
 	"private": true,
 	"scripts": {
-		"lint": "eslint --ext .js,.vue ./ && yarn prettify",
+		"lint": "yarn eslint --ext .js,.vue ./ && yarn prettify",
 		"test": "echo \"No test specified\" && exit 0",
 		"dev": "quasar dev",
 		"back": "mvn spring-boot:run -Dspring-boot.run.profiles=h2 -f ../Hotelaria-Backend/",
-		"prettify": "yarn prettier {src,public}/**/*.{js,css,html,json,vue} --write",
+		"prettify": "yarn prettier ./**/*.{js,css,html,json,vue} --write",
 		"build": "yarn quasar build",
 		"start": "yarn quasar serve dist/spa/",
 		"heroku-postbuild": "yarn && yarn build"

@@ -42,7 +42,6 @@ actions
 							size="sm"
 							color="accent"
 							round
-							dense
 							:props="props"
 							@click="gerenciarPessoa(props.row)"
 							icon="edit"
@@ -53,7 +52,6 @@ actions
 							size="sm"
 							color="accent"
 							round
-							dense
 							:props="props"
 							@click="checkinCheckout(props.row)"
 							icon="hotel"
