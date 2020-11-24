@@ -3,7 +3,7 @@
 		<q-header elevated class="bg-primary text-white" height-hint="98">
 			<q-toolbar>
 				<q-toolbar-title>
-					<q-btn to="/">Hotelaria</q-btn>
+					<q-btn to="/" color="secondary">Hotelaria</q-btn>
 				</q-toolbar-title>
 			</q-toolbar>
 

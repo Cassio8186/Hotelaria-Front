@@ -1,6 +1,6 @@
 <template>
-	<div>
-		<q-btn to="/pessoas/cadastrar">Adicionar Pessoa</q-btn>
+	<div class="">
+		<q-btn to="/pessoas/cadastrar" color="positive">Adicionar Pessoa</q-btn>
 		<ListaPessoas />
 	</div>
 </template>
