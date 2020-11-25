@@ -1,15 +1,26 @@
 <template>
 	<div>
 		<q-form class="q-gutter-md" @submit="onSubmit">
-			<q-input
-				type="string"
-				label="Cpf"
-				hint="Digite CPF Sem pontos"
-				:readonly="update"
-				lazy-rules
-				v-model="form.cpf"
-				:rules="[val => isValidCPF(val) || 'Digite um cpf valido']"
-			/>
+			<div>
+				<q-input
+					type="string"
+					label="Cpf"
+					hint="Digite CPF Sem pontos"
+					:readonly="update"
+					mask="###########"
+					lazy-rules
+					v-model="form.cpf"
+					:rules="[val => isValidCPF(val) || 'Digite um cpf valido']"
+				/>
+				<q-btn
+					label="Gerar CPF Aleatório"
+					@click="generateCpf"
+					color="primary"
+					class="q-mt-md"
+					v-if="!update"
+					dense
+				/>
+			</div>
 
 			<q-input
 				label="Digite seu nome e sobrenome"
@@ -159,7 +170,7 @@
 </template>
 
 <script>
-import { Validators, Date } from "../util";
+import { Validators, Date, Populator } from "../util";
 import { PessoaService } from "src/services";
 
 export default {
@@ -201,6 +212,10 @@ export default {
 		onRemoverPessoa() {
 			this.$emit("deletePessoa", this.pessoa);
 		},
+		generateCpf() {
+			this.form.cpf = Populator.generateCpf();
+		},
+
 		onReset() {
 			this.form = {
 				nome: "",

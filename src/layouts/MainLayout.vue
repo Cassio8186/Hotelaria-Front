@@ -4,6 +4,9 @@
 			<q-toolbar>
 				<q-toolbar-title>
 					<q-btn to="/" color="secondary">Hotelaria</q-btn>
+					<q-space />
+					Não insira informações pessoais, este site é apenas para
+					estudo.
 				</q-toolbar-title>
 			</q-toolbar>
 
