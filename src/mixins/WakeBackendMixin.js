@@ -25,7 +25,9 @@ const mixin = {
 		},
 		showLoading() {
 			this.$q.loading.show({
-				message: generateRandomLoadingMessage(loadingMessages)
+				message: `Carregando... <br>${generateRandomLoadingMessage(
+					loadingMessages
+				)}`
 			});
 		},
 
